@@ -1,17 +1,20 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
-import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Message from "./Message";
 import Container from "@material-ui/core/Container";
+import db from "./firebase";
 
 function App() {
   const [ input, setInput ] = useState('');
-  const [ messages, setMessages ] = useState([
-      {username: 'durjoy', message: 'hello'},
-      {username: 'Yoo', message: 'hi'},
-  ]);
+  const [ messages, setMessages ] = useState([]);
   const [ username, setUsername ] = useState('');
+
+  useEffect(() => {
+      db.collection('messages').onSnapshot(snapshot => {
+          setMessages(snapshot.docs.map(doc => doc.data()))
+      })
+  }, []);
 
   useEffect( () => {
     setUsername(prompt('Please enter your name !'))

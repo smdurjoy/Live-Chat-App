@@ -33,7 +33,6 @@ body {
   color: #2d2d2d;
   width: fit-content;
   margin: 10px;
-  margin-top: 1rem;
 }
 
 .userMessage {
@@ -42,7 +41,8 @@ body {
 }
 
 .userMsg {
-  background: #dca104;
+  background: rgb(10,167,196);
+  background: linear-gradient(90deg, rgba(10,167,196,1) 32%, rgba(10,196,156,1) 94%);
   color: white;
   padding: 10px;
   border-radius: 10px;

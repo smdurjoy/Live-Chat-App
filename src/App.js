@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
-import Button from "@material-ui/core/Button";
 import Message from "./Message";
 import Container from "@material-ui/core/Container";
 import db from "./firebase";
@@ -24,7 +23,7 @@ function App() {
   }, []);
 
   useEffect( () => {
-    setUsername(prompt('Please enter your name !'))
+    setUsername(prompt('Enter your existing name or new name to chat.'))
   }, [])
 
   const sendMessage = (event) => {

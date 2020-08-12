@@ -7,7 +7,7 @@ const Message = forwardRef(({ username, message }, ref) => {
         <div ref={ref}>
             <div className={`messages ${isUser && 'userMessage'}`}>
                 <div className={isUser ? 'userMsg' : 'guestMsg'}>
-                    {!isUser && `${message.username}:`} {message.messages}
+                    {!isUser && `${message.username || 'Unknown User'}: `} {message.messages}
                 </div>
             </div>
         </div>

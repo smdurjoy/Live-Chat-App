@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: #2d2d2d;
   color: #fff;
@@ -10,6 +16,7 @@ body {
 .title {
   font-size: 28px;
   color: #fff;
+  margin-top: 5px;
 }
 
 .helloMsg {
@@ -18,15 +25,35 @@ body {
 }
 
 .sendMsgBox {
-  bottom: 0;
-  margin: 10px;
   width: 100%;
   background: #ddd;
   border-radius: 20px;
+  margin-bottom: 5px;
+  display: flex;
 }
 
-.yoo {
-  margin-top: auto;
+.msgInput {
+  flex: 1;
+  font-size: 16px;
+}
+
+.sendIcon {
+  flex: 0;
+}
+
+.topSection {
+  height: 10vh;
+}
+
+.msgSection {
+  height: 80vh;
+  overflow-y: auto;
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important;  /* IE 10+ */
+}
+
+.bottomSection {
+  height: 10vh;
 }
 
 .messages {
@@ -54,5 +81,10 @@ body {
   padding: 10px;
   border-radius: 10px;
 }
+
+::-webkit-scrollbar {
+  display: none !important;
+}
+
 
 

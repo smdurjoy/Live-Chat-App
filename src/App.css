@@ -7,6 +7,9 @@
 body {
   background: #2d2d2d;
   color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif !important;
 }
 
 .App {
@@ -86,5 +89,86 @@ body {
   display: none !important;
 }
 
+.loading {
+  margin-top: 35vh;
+}
 
+.username {
+  color: rgb(1, 125, 147);
+}
 
+.msgTime {
+  color: #2d2d2d;
+  font-size: 10px;
+}
+
+.helpMsg {
+  font-size: 12px;
+}
+
+.helloUser {
+  font-size: 12px;
+  margin-left: auto;
+}
+
+.intro {
+  display: flex;
+}
+
+@media (min-width: 369px) and (max-width: 576px) {
+  .topSection {
+    height: 10vh;
+  }
+
+  .msgSection {
+    height: 80vh;
+  }
+
+  .bottomSection {
+    height: 10vh;
+  }
+
+  .title {
+    font-size: 25px;
+    color: #fff;
+    margin-top: 5px;
+  }
+
+  .helpMsg {
+    margin-top: 3px;
+  }
+
+  .helloUser {
+    margin-top: 3px;
+  }
+}
+
+@media (max-width: 368px) {
+  .title {
+    font-size: 25px;
+    color: #fff;
+    margin-top: 5px;
+  }
+
+  .topSection {
+    height: 15vh;
+  }
+
+  .msgSection {
+    height: 75vh;
+  }
+
+  .bottomSection {
+    height: 10vh;
+  }
+
+  .helpMsg {
+    margin-top: 3px;
+    font-size: 11px;
+  }
+
+  .helloUser {
+    margin-top: 3px;
+    font-size: 11px;
+  }
+}
